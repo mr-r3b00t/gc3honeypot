@@ -119,6 +119,9 @@ chmod 644 "${WEB_ROOT}/index.php"
 # ──────────────────────────────────────────────────────────────────────────────
 #  Restart services
 # ──────────────────────────────────────────────────────────────────────────────
+info "Giving Permission to read Logs..."
+
+sudo usermod -aG adm www-data
 
 info "Restarting Apache..."
 
